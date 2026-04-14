@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
-      "@": path.resolve(import.meta.dirname, "src"),
+      "@": path.resolve(import.meta.dirname),
       "@shared": path.resolve(import.meta.dirname, "shared"),
     },
   },
@@ -21,6 +21,5 @@ export default defineConfig({
   server: {
     host: true,
     allowedHosts: ["localhost", "127.0.0.1"],
-    fs: { strict: true, deny: ["**/.env*"] },
   },
 });
