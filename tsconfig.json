@@ -1,6 +1,6 @@
 {
-  "include": ["src/**/*", "shared/**/*", "server/**/*"],
-  "exclude": ["node_modules", "build", "dist", "**/*.test.ts"],
+  "include": ["**/*", "shared/**/*", "server/**/*"],
+  "exclude": ["node_modules", "build", "dist", "**/**.test.ts"],
   "compilerOptions": {
     "incremental": true,
     "noEmit": true,
@@ -15,7 +15,7 @@
     "baseUrl": ".",
     "types": ["node", "vite/client"],
     "paths": {
-      "@/*": ["./src/*"],
+      "@/*": ["./*"],
       "@shared/*": ["./shared/*"]
     }
   }
